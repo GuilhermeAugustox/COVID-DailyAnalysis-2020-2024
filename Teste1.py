@@ -58,27 +58,28 @@ fig_casos_mortes.update_layout(xaxis = {'categoryorder': 'total descending'}, xa
 
 st.markdown("<h2 style='text-align: center;'> 10 Maiores Registros <h2>", unsafe_allow_html=True )
 
-st.write('Gráfico Interativo: Casos por País')
-st.plotly_chart(fig_casos_10)
 
-st.write('Gráfico Interativo: Mortes por País')
+st.plotly_chart(fig_casos_10)
+st.write('Gráfico 01: Este gráfico apresenta os 10 países com o maior número de casos de COVID-19 resgistrados no período de 2020 a 2024')
+
 st.plotly_chart(fig_mortes_10)
+st.write('Gráfico 02: Este gráfico apresenta os 10 países com o maior número de mortes de COVID-19 resgistradas no período de 2020 a 2024')
 
 st.write('Gráfico Interativo: Casos e Mortes por País')
 st.plotly_chart(fig_casos_mortes_10)
-
+st.write('Gráfico 03: Gráfico apresenta os 10 países com o maior número de casos de COVID-19 e as respectivas quantidades de mortes no período de 2020 a 2024')
 
 st.markdown("<h3 style='text-align: center;'> Registros Globais <h3>", unsafe_allow_html=True )
 
-st.write('Gráfico Interativo: Casos por País')
+st.write('Gráfico 04: Este gráfico apresenta as quantidades de casos de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 st.plotly_chart(fig_casos)
 
 
-st.write('Gráfico Interativo: Mortes por País')
+st.write('Gráfico 05: Este gráfico apresenta as quantidades de mortes de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 st.plotly_chart(fig_mortes)
 
 
-st.write('Gráfico Interativo: Casos e Mortes por País')
+st.write('Gráfico 06: Este gráfico apresenta as quantidade de casos e morte por COVID-19 em todos os países ao redor do mundo, registradas no período de 2020 a 2024')
 st.plotly_chart(fig_casos_mortes)
 
 
