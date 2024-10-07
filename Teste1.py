@@ -7,6 +7,8 @@ import streamlit as st
 ''''''
 df = pd.read_csv('WHO-COVID-19-global-table-data.csv', sep=',')
 df_total = df.drop(columns=['Cases - cumulative total per 100000 population', 'Cases - newly reported in last 7 days', 'Cases - newly reported in last 7 days per 100000 population', 'Cases - newly reported in last 24 hours', 'Deaths - cumulative total per 100000 population', 'Deaths - newly reported in last 7 days', 'Deaths - newly reported in last 7 days per 100000 population', 'Deaths - newly reported in last 24 hours'])
+df_filtrado = df[df['Name'] != 'Global']
+
 
 st.markdown("<h1 style='text-align: center;'> DashBoard sobre dados da COVID-19 (2020-2024) <h1>", unsafe_allow_html=True )
 
@@ -85,3 +87,31 @@ st.plotly_chart(fig_casos_mortes)
 
 st.write('Tabela dos Dados:')
 st.dataframe(df_sorted)
+
+
+df_filtrado  = df_filtrado.rename(columns = {'Name': 'Country'})
+fig_mundi_casos = px.choropleth(
+    df_filtrado, 
+    locations = 'Country',
+    locationmode = 'country names',
+    color = 'Cases - cumulative total',
+    hover_name = 'Country',
+    color_continuous_scale = 'greens',
+    height = 700,
+    width = 1000,
+    title = 'Mapa Minocromático: Casos de COVID-19 (2020-2024)' 
+)
+
+fig_mundi_mortes = px.choropleth(
+    df_filtrado, 
+    locations = 'Country',
+    locationmode = 'country names',
+    color = 'Deaths - cumulative total',
+    hover_name = 'Country',
+    color_continuous_scale = 'reds',
+    height = 700,
+    width = 1000,
+    title = 'Mapa Minocromático: Mortes de COVID-19 (2020-2024)' 
+)
+st.plotly_chart(fig_mundi_casos)
+st.plotly_chart(fig_mundi_mortes)
