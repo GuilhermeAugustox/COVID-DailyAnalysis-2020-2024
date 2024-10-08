@@ -73,20 +73,15 @@ st.write('Gráfico 03: Gráfico apresenta os 10 países com o maior número de c
 
 st.markdown("<h3 style='text-align: center;'> Registros Globais <h3>", unsafe_allow_html=True )
 
-st.write('Gráfico 04: Este gráfico apresenta as quantidades de casos de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 st.plotly_chart(fig_casos)
+st.write('Gráfico 04: Este gráfico apresenta as quantidades de casos de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 
-
-st.write('Gráfico 05: Este gráfico apresenta as quantidades de mortes de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 st.plotly_chart(fig_mortes)
+st.write('Gráfico 05: Este gráfico apresenta as quantidades de mortes de COVID-19 em todos os países ao redor do mundo, registrados no período de 2020 a 2024')
 
-
-st.write('Gráfico 06: Este gráfico apresenta as quantidade de casos e morte por COVID-19 em todos os países ao redor do mundo, registradas no período de 2020 a 2024')
 st.plotly_chart(fig_casos_mortes)
+st.write('Gráfico 06: Este gráfico apresenta as quantidade de casos e morte por COVID-19 em todos os países ao redor do mundo, registradas no período de 2020 a 2024')
 
-
-st.write('Tabela dos Dados:')
-st.dataframe(df_sorted)
 
 
 df_filtrado  = df_filtrado.rename(columns = {'Name': 'Country'})
@@ -98,9 +93,10 @@ fig_mundi_casos = px.choropleth(
     hover_name = 'Country',
     color_continuous_scale = 'greens',
     height = 700,
-    width = 1000,
+    width = 700,
     title = 'Mapa Minocromático: Casos de COVID-19 (2020-2024)' 
 )
+
 
 fig_mundi_mortes = px.choropleth(
     df_filtrado, 
@@ -110,8 +106,13 @@ fig_mundi_mortes = px.choropleth(
     hover_name = 'Country',
     color_continuous_scale = 'reds',
     height = 700,
-    width = 1000,
+    width = 700,
     title = 'Mapa Minocromático: Mortes de COVID-19 (2020-2024)' 
 )
 st.plotly_chart(fig_mundi_casos)
+st.write('Gráfico 07: Este gráfico apresenta um mapa-múndi, representando a quantidade total de casos por COVID-19 registrados no período de 2020 a 2024. As áreas em tons de verde mais escuros indicam uma quantidade maior de casos, enquanto os tons mais claros representam uma menor incidência')
 st.plotly_chart(fig_mundi_mortes)
+st.write('Gráfico 07: Este gráfico apresenta um mapa-múndi, representando a quantidade total de mortes por COVID-19 registrados no período de 2020 a 2024. As áreas em tons de vermelho mais escuros indicam uma quantidade maior de casos, enquanto os tons mais claros representam uma menor incidência')
+
+st.write('Tabela dos Dados:')
+st.dataframe(df_sorted)
