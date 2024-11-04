@@ -7,6 +7,8 @@ Este projeto consistem em um painel interativo desenvolvido utilizando a bibliot
 - Link Dataser: [Daily COVID-19 Data(2020-2024)](https://www.kaggle.com/datasets/abdoomoh/daily-covid-19-data-2020-2024)
 
 # Metodologia
+- Limpeza dos Dados: Após o carregamento do dataset, foi realizada a remoção de algumas colunas presentes no dataset original que não irão ser utilizadas no processo de análise
+- Análise Exploratória (EDA): Durante a EDA foi realizado várias relações e comparações dentre elas: total de casos e mortes por regiões, total e relação de casos e mortes por país. 
 
 # Tecnologias e Bibliotecas
 - Linguagem: Python
