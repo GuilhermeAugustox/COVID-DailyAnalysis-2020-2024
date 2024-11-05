@@ -31,3 +31,20 @@ Este projeto consistem em um painel interativo desenvolvido utilizando a bibliot
 
 4. Tabela de Dados:
     - Exibição dos dados da OMS em uma tabela interativa, possibilitando a filtragem e a pesquisa para análises mais detalhadas
+
+# Para Rodar o Projeto no Streamlit
+A Visualização deste projeto foi desenvolvido com o Streamlit, possibilitando a execução do projeto localmente para a exploração dos dados interativamente. Siga os dados abaixo:
+
+1. Certifique-se de possuir a versão Python 3.7+
+2. Instale as Dependências
+Clone o repositório para sua máquina e isntale as dependências necessárias
+3. Execute a visualização com Streamlit
+Inicie a aplicação utilizando o comando:
+streamlit run nome_do_arquivo.py
+Lembre-se de substituir "nome_do_arquivo" pelo nome do arquivo principal do projeto (o arquivo Python que está o código do Streamlit)
+4. Acesse a Visualização
+Após a execução do comando, o Streamlit iniciará um servidor local e exibirá o endereço onde a visualização está operando. Geralmente, o endereço padrão é: http://localhost:8501
+Acesse esse endereço em seu navegador para visualizar a análise e explorar os dados.
+
+# Licença
+Esse projeto é licenciado sob a liderança MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
