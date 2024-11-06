@@ -36,13 +36,13 @@ Este projeto consistem em um painel interativo desenvolvido utilizando a bibliot
 A Visualização deste projeto foi desenvolvido com o Streamlit, possibilitando a execução do projeto localmente para a exploração dos dados interativamente. Siga os dados abaixo:
 
 1. Certifique-se de possuir a versão Python 3.7+
-2. Instale as Dependências
+2. Instale as Dependências <br/>
 Clone o repositório para sua máquina e isntale as dependências necessárias
-3. Execute a visualização com Streamlit
+3. Execute a visualização com Streamlit<br/>
 Inicie a aplicação utilizando o comando:
 streamlit run nome_do_arquivo.py
 Lembre-se de substituir "nome_do_arquivo" pelo nome do arquivo principal do projeto (o arquivo Python que está o código do Streamlit)
-4. Acesse a Visualização
+4. Acesse a Visualização<br/>
 Após a execução do comando, o Streamlit iniciará um servidor local e exibirá o endereço onde a visualização está operando. Geralmente, o endereço padrão é: http://localhost:8501
 Acesse esse endereço em seu navegador para visualizar a análise e explorar os dados.
 
